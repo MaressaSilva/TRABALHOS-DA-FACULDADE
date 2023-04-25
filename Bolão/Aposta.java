@@ -3,6 +3,7 @@ import java.util.ArrayList;
 
 // ARRUMAR SCANNERS*************************************************************************************
 
+
 public class Aposta {
     private ArrayList<Integer> numeros;
     private Jogador organizador;
