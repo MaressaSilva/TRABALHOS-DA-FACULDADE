@@ -6,7 +6,7 @@ public class Jogador extends Pessoa{
    
     public Jogador(){
         super();
-        System.out.print("Insira seu PIX: ");
+        System.out.print("Insira o PIX: ");
         this.pix = Leitor.lerPalavra();
         //System.out.println("");
     }

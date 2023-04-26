@@ -1,5 +1,4 @@
-
- package Bolão;
+package Bolão;
 
 public class Jogar {
     public static void printarMenu(Bolao bolao) {

@@ -5,13 +5,12 @@ public class Pessoa{
     protected String cpf;
 
     public Pessoa(){
-
-        System.out.printf("Digite o nome: ");
+        
+        System.out.print("\nDigite o nome: ");
         this.nome = Leitor.lerLinha();
 
-        System.out.printf("Digite o cpf: ");
-        this.cpf = Leitor.lerPalavra();  //  MELHORARA LEITURA DO CPF
-        //this.pessoa.close();          SE EU FECHAR O SCANNER AQUI DA ERRO
+        System.out.print("Digite o cpf: ");
+        this.cpf = Leitor.lerPalavra();
     }
     
     public void listarDados(){
