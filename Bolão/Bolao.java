@@ -78,6 +78,7 @@ public class Bolao {
         
     }
     /*public static boolean validarNum(int num, ArrayList<Integer> numeross){
+    public boolean validarNum(int num, ArrayList<Integer> numeross){
         if(numeross.contains(num)){
          System.out.println("Esse número já foi inserido");
          return false;

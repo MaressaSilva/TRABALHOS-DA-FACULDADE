@@ -21,7 +21,9 @@ public class Aposta {
     }
 
     public void listarVencedores( double premio) {
+
         System.out.println("\n**** BILHETE VENCEDOR!!! ****");
+        System.out.println("\n**** BILHETE VENCEDOR!!! *****\n");
         double premioJogador = (premio-(premio*0.1))/(this.jogadores.size());
 
         this.organizador.listarDados();
