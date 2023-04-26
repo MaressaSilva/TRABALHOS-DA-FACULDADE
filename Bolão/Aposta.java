@@ -1,10 +1,7 @@
 package Bolão;
 import java.util.ArrayList;
 
-
-
 // ARRUMAR SCANNERS*************************************************************************************
-
 
 public class Aposta {
     private ArrayList<Integer> numeros;
@@ -48,7 +45,7 @@ public class Aposta {
         System.out.print("Insira a quandidade de números que vão ser apostados: ");
         numJog = Leitor.lerInteiro();
         while(numJog<6){
-            System.out.println("Quantidade precisa ser maior ou igual a 6!");
+            System.out.println("Quantidade precisa estar entre 6 e 60!");
             System.out.print("Insira a quandidade de números que vão ser apostados: ");
             numJog = Leitor.lerInteiro();
         }
@@ -56,7 +53,7 @@ public class Aposta {
         while(this.numeros.size()<=60 && this.numeros.size()<numJog){
             System.out.print(i+1 + "° número:");
             num = Leitor.lerInteiro();
-            while(!validarNum(num)) {
+            while(!validarNum(num,this.numeros)) {
                 System.out.print(i+1 + "° número:");
                 num = Leitor.lerInteiro();
             } 
@@ -69,9 +66,9 @@ public class Aposta {
         return this.numeros;
     }
     
-    public boolean validarNum(int num){
-       if(this.numeros.contains(num)){
-        System.out.println("Esse número já foi apostado!");
+    public boolean validarNum(int num, ArrayList<Integer> numeross){
+       if(numeross.contains(num)){
+        System.out.println("Esse número já foi inserido");
         return false;
        }
        if(num<1 || num>60){
@@ -87,7 +84,7 @@ public class Aposta {
         /*for(Jogador jogador: jogadoresCadastrados){
             jogador.listarDados();
         }*/
-        System.out.print("Digite o CPf do organizador: ");
+        System.out.print("Digite o CPf do organizador: "); 
         cpf = Leitor.lerPalavra();
         this.organizador = buscarJogador(jogadoresCadastrados, cpf);
         if(this.organizador == null) this.organizador = getprimeiroJogador(jogadoresCadastrados);

@@ -40,15 +40,31 @@ public class Bolao {
         return ganhadoras;
     }
 
+    public boolean validarNum(int num, ArrayList<Integer> numeross){
+        if(numeross.contains(num)){
+         System.out.println("Esse número já foi inserido");
+         return false;
+        }
+        if(num<1 || num>60){
+         System.out.println("Digite um número entre 1 e 60");
+         return false;
+        }
+        return true;
+     }
     public void inserirSorteio(){
         double premio, premioBilhete;
         ArrayList<Integer> numeros = new ArrayList<Integer>();
         ArrayList<Aposta> vencedoras = new ArrayList<Aposta>();
+        int num = 0;
 
         System.out.println("\nDIGITE OS NÚMEROS SORTEDOS");
         for(int i=1;i<=6;i++){
             System.out.print( + i + "° número: ");
-            numeros.add(Leitor.lerInteiro());
+            num = Leitor.lerInteiro();
+           while(validarNum(num, numeros)){
+                System.out.print(i+1 + "° número:");
+                num = Leitor.lerInteiro();
+           }
         }
         System.out.print("Valor do prémio: ");
         premio = Leitor.lerDouble();   
@@ -59,3 +75,4 @@ public class Bolao {
         }
     }
 }
+
