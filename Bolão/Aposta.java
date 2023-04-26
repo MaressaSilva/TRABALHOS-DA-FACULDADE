@@ -21,6 +21,8 @@ public class Aposta {
     }
 
     public void listarVencedores( double premio) {
+
+        System.out.println("\n**** BILHETE VENCEDOR!!! ****");
         System.out.println("\n**** BILHETE VENCEDOR!!! *****\n");
         double premioJogador = (premio-(premio*0.1))/(this.jogadores.size());
 
@@ -113,7 +115,7 @@ public class Aposta {
         }
     }
    
-    public Jogador buscarJogador(ArrayList<Jogador>jogadoresCadastrados, String cpf){
+    public static Jogador buscarJogador(ArrayList<Jogador>jogadoresCadastrados, String cpf){
         for( Jogador jogador: jogadoresCadastrados){
             if(jogador.cpf.equals(cpf)){
                 return jogador;
