@@ -27,7 +27,7 @@ public class Bolao {
 
     public void cadastrarAposta(){  // PRECISA TER JOGADORES ANTES??
         Aposta aposta = new Aposta();
-        if(jogadores.size()>=2){
+        if(jogadores.size()>0){
             aposta.inserirNumeros();
             aposta.inserirOrganizador(jogadores);
             aposta.inserirJogadores(jogadores);
@@ -90,4 +90,3 @@ public class Bolao {
         return true;
      }*/
 }
-
