@@ -39,12 +39,12 @@ public class Aposta {
         int numJog,i = 0,num;
         System.out.print("Insira a quandidade de números que vão ser apostados: ");
         numJog = Leitor.lerInteiro();
-        while(numJog<6 || numJog>60){
-            System.out.println("Quantidade precisa estar entre 6 e 60!");
+        while(numJog<6 || numJog>15){
+            System.out.println("Quantidade precisa estar entre 6 e 15!");
             System.out.print("Insira a quandidade de números que vão ser apostados: ");
             numJog = Leitor.lerInteiro();
         }
-        while(this.numeros.size()<=60 && this.numeros.size()<numJog){
+        while(this.numeros.size()<numJog){
             System.out.print(i+1 + "° número:");
             num = Leitor.lerInteiro();
             while(!validarNum(num,this.numeros)) {
@@ -87,9 +87,9 @@ public class Aposta {
     public void inserirJogadores(ArrayList<Jogador>jogadoresCadastrados){ //TEM QUE LISTAR OS DADOS DE TODOS JOGADORES A CADA ESCOLHA?
         int i=1;
         Jogador jogador = null;
-        System.out.print("N° de jogadores do bilhete: ");
+        System.out.print("N° de jogadores do bilhete, além do organizador: ");
         int quant = Leitor.lerInteiro();
-        if(quant>1){ // MAIOR QUE 1 OU 2?
+        if(quant>0){ // MAIOR QUE 1 OU 2?
             listarJogadores(jogadoresCadastrados);
             while(i<=quant){
                 System.out.print("\nDigite o CPF do jogador " + i + ": ");
