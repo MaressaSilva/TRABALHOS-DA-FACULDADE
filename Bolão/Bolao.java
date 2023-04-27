@@ -33,7 +33,7 @@ public class Bolao {
             aposta.inserirJogadores(jogadores);
             this.apostas.add(aposta);
         }else{
-            System.out.println("\n NÃO HÁ JOGADORES SUFICIENTE CADASTRADOS!");
+            System.out.println("\n NÃO HÁ JOGADORES SUFICIENTE CADASTRADOS!!");
         }
     }
 
@@ -45,7 +45,7 @@ public class Bolao {
             }
         }
         return ganhadoras;
-    }
+    } 
 
     public void inserirSorteio(){
         double premio, premioBilhete;

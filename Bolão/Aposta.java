@@ -15,15 +15,14 @@ public class Aposta {
         int i=0;
         for(Integer num: numeros){
             if(sorteados.contains(num)) i+=1;
-        }
+        } 
         if(i==6) return true;
         else return false;
     }
 
     public void listarVencedores( double premio) {
 
-        System.out.println("\n**** BILHETE VENCEDOR!!! ****");
-        System.out.println("\n**** BILHETE VENCEDOR!!! *****\n");
+        System.out.println("\n**** BILHETE VENCEDOR!!!*****\n");
         double premioJogador = (premio-(premio*0.1))/(this.jogadores.size());
 
         this.organizador.listarDados();
@@ -54,7 +53,7 @@ public class Aposta {
             i+=1;
             (this.numeros).add(num);
         }
-      System.out.println("Números Inseridos..");
+      System.out.println("Números Inseridos...");
     }
 
     protected ArrayList<Integer> getNumeros(){
