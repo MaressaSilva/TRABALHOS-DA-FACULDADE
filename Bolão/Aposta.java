@@ -24,9 +24,9 @@ public class Aposta {
 
         System.out.println("\n**** BILHETE VENCEDOR!!!*****\n");
         double premioJogador = (premio-(premio*0.1))/(this.jogadores.size());
-
+        System.out.println("*Organizador*");
         this.organizador.listarDados();
-        System.out.println("\nPremio: " + (premio*0.1));
+        System.out.println("Premio: " + (premio*0.1));
         System.out.println("\n**JOGADORES**");
         for(Jogador jogador: this.jogadores){
             jogador.listarDados();
@@ -91,7 +91,7 @@ public class Aposta {
         if(quant>0){ // MAIOR QUE 1 OU 2?
             listarJogadores(jogadoresCadastrados);
             while(i<=quant){
-                System.out.print("\nDigite o CPF do jogador " + i + ": ");
+                System.out.print("\nDigite o CPF do jogador " + (i+1) + ": ");
                 String cpfJogador = Leitor.lerPalavra();
                 jogador = buscarJogador(jogadoresCadastrados, cpfJogador);
                 i++;
