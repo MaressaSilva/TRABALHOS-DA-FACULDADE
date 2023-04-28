@@ -5,7 +5,7 @@ public class Jogador extends Pessoa{
     protected String pix;
    
     public Jogador(){
-        super();
+        super(); 
         System.out.print("Insira o PIX: ");
         this.pix = Leitor.lerPalavra();
         //System.out.println("");
@@ -14,7 +14,7 @@ public class Jogador extends Pessoa{
         super.listarDados();
         System.out.println("Pix: " + this.pix );
 
-    }
+    } 
     protected String getCpf(){
         return this.cpf;
     }
