@@ -1,2 +1,2 @@
-# TRABALHOS-DA-FACULDADE
-Este repositório terá os projetos que desenvolvi durante a faculdade.
+Programas utilizando Orientação a objetos.
+
